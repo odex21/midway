@@ -14,7 +14,9 @@ export default (appInfo: MidwayAppInfo): MidwayConfig => {
           driver: SqliteDriver, // 这里使用了 sqlite 做示例
           // debug: true,
           // allowGlobalContext: true,
-          contextName: 'default1',
+          //@ts-ignore
+          registerRequestContext: true,
+          contextName: 'a1',
           timezone: '+08:00',
           loadStrategy: LoadStrategy.JOINED,
           // forceUtcTimezone: true, //可以强制将日期保存在不带时区的日期
